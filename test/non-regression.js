@@ -185,7 +185,7 @@ describe("verify", () => {
     );
   });
 
-  describe("flow", () => {
+  describe.skip("flow", () => {
     it("check regular function", () => {
       verifyAndAssertMessages(
         "function a(b, c) { b += 1; c += 1; return b + c; } a;",
@@ -1456,7 +1456,7 @@ describe("verify", () => {
     });
   });
 
-  it("default param flow type no-unused-vars #184", () => {
+  it.skip("default param flow type no-unused-vars #184", () => {
     verifyAndAssertMessages(
       `
         type ResolveOptionType = {
@@ -1520,7 +1520,7 @@ describe("verify", () => {
     );
   });
 
-  it("fixes issues with flow types and ObjectPattern", () => {
+  it.skip("fixes issues with flow types and ObjectPattern", () => {
     verifyAndAssertMessages(
       `
         import type Foo from 'bar';
@@ -1648,7 +1648,7 @@ describe("verify", () => {
     );
   });
 
-  it("Flow definition does not trigger warnings #223", () => {
+  it.skip("Flow definition does not trigger warnings #223", () => {
     verifyAndAssertMessages(
       `
         import { Map as $Map } from 'immutable';
@@ -1775,7 +1775,7 @@ describe("verify", () => {
     });
   });
 
-  it("flow types on class method should be visited correctly", () => {
+  it.skip("flow types on class method should be visited correctly", () => {
     verifyAndAssertMessages(
       `
         import type NodeType from 'foo';
